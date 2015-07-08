@@ -137,10 +137,7 @@ NSString * const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if(!decelerate)
-    {
-        [self.scrollerFollow scrollViewDidEndDecelerating];
-    }
+    [self.scrollerFollow scrollViewDidEndDragging:decelerate];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
