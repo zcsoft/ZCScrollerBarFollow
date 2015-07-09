@@ -42,6 +42,7 @@
 
 //主动显示滚动标签（需要在table视图可以滚动时执行，既视图控制器viewDidAppear或之后）
 //滚动标签默认是不显示的，如果设置了autoHide=NO;则需要在viewDidAppear中调用show，以显示标签
+//如果在界面A中present一个视图B，则在视图A的viewWillAppear中需要调用show，以显示标签
 - (void)show;
 
 //滚动相关

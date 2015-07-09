@@ -57,6 +57,14 @@ NSString * const TableViewCellIdentifier = @"TableViewCellIdentifier";
     [[self tableView] registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //如果在界面中present一个视图，则在视图返回前需要显示一下scrollerFollow
+    [self.scrollerFollow show];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

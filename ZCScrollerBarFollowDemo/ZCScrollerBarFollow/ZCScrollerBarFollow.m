@@ -57,7 +57,8 @@
 {
     //闪现、移动，结束
     [_tableView flashScrollIndicators];
-    [_tableView setContentOffset:CGPointMake(0, 1) animated:NO];
+    [_tableView setContentOffset:CGPointMake(0, _tableView.contentOffset.y+1) animated:NO];
+    [_tableView setContentOffset:CGPointMake(0, _tableView.contentOffset.y-1) animated:NO];
     [self scrollViewDidEndDecelerating];
 }
 
